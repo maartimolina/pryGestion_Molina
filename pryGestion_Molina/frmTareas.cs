@@ -68,6 +68,11 @@ namespace pryGestion_Molina
                     dtpFecha.Focus();
                 }
             }
-        }   
+        }
+
+        private void chkNotas_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
