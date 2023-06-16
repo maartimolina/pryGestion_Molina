@@ -16,7 +16,7 @@ namespace pryGestion_Molina
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmRegistrar());
+            Application.Run(new frmIniciarSesion());
         }
     }
 }

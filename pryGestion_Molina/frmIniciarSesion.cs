@@ -12,9 +12,35 @@ namespace pryGestion_Molina
 {
     public partial class frmIniciarSesion : Form
     {
+        frmRegistrarUsuario ventanaReg = new frmRegistrarUsuario();
+        
+
         public frmIniciarSesion()
         {
             InitializeComponent();
+        }
+
+        private void frmIniciarSesion_Load(object sender, EventArgs e)
+        {
+            //ventanaReg.vectorUsuario
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            txtUsuario.Text= String.Empty;
+            txtContraseña.Text= String.Empty;
+        
+        }
+
+        private void btnUsuarioNuevo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (true)
+            {
+                frmRegistrarUsuario ventanaRegistrar = new frmRegistrarUsuario();
+                ventanaRegistrar.ShowDialog();
+                this.Hide();
+            }
         }
     }
 }

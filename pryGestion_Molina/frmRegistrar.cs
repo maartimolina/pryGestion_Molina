@@ -10,15 +10,39 @@ using System.Windows.Forms;
 
 namespace pryGestion_Molina
 {
-    public partial class frmRegistrar : Form
+    public partial class frmRegistrarUsuario : Form
     {
-        public frmRegistrar()
+       public string[] vectorUsuario = new string[30];
+        int indiceRegristro=0;
+        public frmRegistrarUsuario()
         {
             InitializeComponent();
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            string datoConcatenado;
+            datoConcatenado = txtApellido.Text + "," + txtNombre.Text + "," 
+                + txtUsuario.Text + "," + txtContraseña.Text + "," + lstPais.Text 
+                + "," + lstDelegacion.Text;
+
+            vectorUsuario[indiceRegristro] = datoConcatenado;
+            indiceRegristro++;
+
+            if (indiceRegristro==30)
+            {
+                MessageBox.Show("Carga Completa de Usuarios", "Loging. Error", MessageBoxButtons.OK);
+                txtApellido.Enabled = false;
+                txtNombre.Enabled = false;
+                txtUsuario.Enabled = false;
+                txtContraseña.Enabled = false;
+                lstPais.Enabled = false;
+                lstDelegacion.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Dato Registrado");
+            }
             frmTareas ventanaTareas= new frmTareas();
             ventanaTareas.ShowDialog();
         }
@@ -29,7 +53,6 @@ namespace pryGestion_Molina
             txtApellido.Text = string.Empty;
             txtUsuario.Text = string.Empty;
             txtContraseña.Text = string.Empty;
-            txtConfirmarContraseña.Text = string.Empty;
             lstDelegacion.Text = string.Empty;
             lstPais.Text = string.Empty;
             
@@ -37,11 +60,12 @@ namespace pryGestion_Molina
 
         private void btnCuenta_CheckedChanged(object sender, EventArgs e)
         {
-            if (btnCuenta.Checked)
-            {
-                frmIniciarSesion ventanaIniciarSesion = new frmIniciarSesion();
-                    ventanaIniciarSesion.ShowDialog();
-            }
+           
+        }
+
+        private void frmRegistrar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
