@@ -12,6 +12,8 @@ namespace pryGestion_Molina
 {
     public partial class frmTareas : Form
     {
+        string varOrgano;
+        DateTime varFecha;
         public frmTareas()
         {
             InitializeComponent();
@@ -71,6 +73,11 @@ namespace pryGestion_Molina
         }
 
         private void chkNotas_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmTareas_Load(object sender, EventArgs e)
         {
 
         }

@@ -67,5 +67,10 @@ namespace pryGestion_Molina
         {
 
         }
+
+        private void lstPais_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

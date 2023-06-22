@@ -42,5 +42,19 @@ namespace pryGestion_Molina
                 this.Hide();
             }
         }
+
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            if (true)
+            {
+                frmTareas ventanaTareas = new frmTareas();
+                    ventanaTareas.ShowDialog();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Dato Incorrecto", "Login.Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
     }
 }
