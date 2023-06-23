@@ -22,7 +22,7 @@ namespace pryGestion_Molina
 
         private void frmIniciarSesion_Load(object sender, EventArgs e)
         {
-            //ventanaReg.vectorUsuario
+            
 
         }
 
@@ -45,16 +45,18 @@ namespace pryGestion_Molina
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            if (true)
-            {
+    
+            //if ()
+            //{
                 frmTareas ventanaTareas = new frmTareas();
                     ventanaTareas.ShowDialog();
                 this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Dato Incorrecto", "Login.Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Dato Incorrecto", "Login.Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //}
         }
+
     }
 }
